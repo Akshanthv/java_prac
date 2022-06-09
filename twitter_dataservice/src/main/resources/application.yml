@@ -1,0 +1,77 @@
+# Spring Boot configuration
+
+spring:
+
+  servlet:
+
+    multipart:
+
+      enabled: true
+
+      max-file-size: 50MB
+
+      max-request-size: 50MB
+
+  profiles:
+
+    active: development
+
+# Database
+
+  datasource:
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    url: jdbc:mysql://localhost:3306/twitter
+
+    username: root
+
+    password: 1001
+
+# JPA properties
+
+  jpa:
+
+    hibernate:
+
+      ddl-auto: none
+
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+    show-sql: true
+
+    database: mysql
+
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+    open-in-view: false
+
+    #generate-ddl: false
+
+# Logger configuration
+
+logging:
+
+  pattern:
+
+    console: "%d %-5level %logger : %msg%n"
+
+  level:
+
+    org.springframework.transaction.interceptor: TRACE
+
+    #org.hibernate: DEBUG
+
+# Server configuration
+
+server:
+
+  port: 8080
+
+  sessionTimeout: 30
+
+  servlet:
+
+    context-path: /twitter/api
+
+
