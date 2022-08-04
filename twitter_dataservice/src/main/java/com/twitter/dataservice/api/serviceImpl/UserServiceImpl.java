@@ -27,6 +27,8 @@ public class UserServiceImpl implements UserService {
 			return false;
 		}
 	}
+	
+	
 
 	@Override
 	public List<User> getAllUsers() {
@@ -45,4 +47,26 @@ public class UserServiceImpl implements UserService {
 		}
 	}
 
+
+
+	@Override
+	public User getUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public User postUserByName(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+//	@Override
+//	public User postUserByUserName(String username) {
+//		Optional<User> user = userRepository.findByUserName(username);
+//		return user.();
+//	}
+	
 }

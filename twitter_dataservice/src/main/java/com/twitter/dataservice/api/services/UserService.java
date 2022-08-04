@@ -9,6 +9,7 @@ public interface UserService {
 	public Boolean authenticate(User user);
 	
 	public List<User> getAllUsers();
-		
+	public User getUserByUsername(String username);	
 	public User getUserById(Long userId);
+	public User postUserByName(String username);
 }

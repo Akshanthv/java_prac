@@ -10,5 +10,7 @@ import com.twitter.dataservice.api.entities.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
-	Optional<User> findById(Long id);
+	Optional<User> findById(int id);
+
+	Optional<User> findByName(String username);
 }
