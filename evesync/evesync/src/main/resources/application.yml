@@ -27,7 +27,7 @@ spring:
 
     username: root
 
-    password: Test!234
+    password: lm100109
 
 # JPA properties
 
