@@ -18,6 +18,6 @@ public interface UserService{
 	
 	public User getUserByfirstname(String firstname);
 	
-	public  User getUserBylastname(String lastname);
+	public User getUserBylastname(String lastname);
 	
 }
