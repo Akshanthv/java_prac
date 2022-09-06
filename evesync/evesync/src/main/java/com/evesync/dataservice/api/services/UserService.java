@@ -8,6 +8,8 @@ public interface UserService{
 	
 	public Boolean authenticate(User user);
 	
+	public User registerUser(User user);
+	
 	public List<User> getAllUsers();
 	
 	public User getUserById(Long userId);
