@@ -12,7 +12,7 @@ public interface UserService{
 	
 	public List<User> getAllUsers();
 	
-	public User getUserById(Long userId);
+	public User getUserById(Long Id);
 	
 	public User getUserByUsername(String username);
 	
