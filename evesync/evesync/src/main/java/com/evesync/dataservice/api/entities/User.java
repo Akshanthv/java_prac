@@ -28,6 +28,28 @@ public class User {
 	@Column(name="password")
 	String password;
 	
+	@Column(name="phone")
+	int phone;
+	
+	@Column(name="email")
+	String email;
+	
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	@Column(name="status")
 	Boolean status;
 

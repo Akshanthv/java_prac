@@ -7,7 +7,7 @@ public class DependencyInjection {
 		IntelProcessor ip = new IntelProcessor();
 		AMDProcessor ap = new AMDProcessor();
 		
-		Computer c = new Computer(ip);
+		Computer c = new Computer(ap);
 		c.executeProcess();
 	}
 }
