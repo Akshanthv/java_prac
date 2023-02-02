@@ -29,16 +29,16 @@ public class User {
 	String password;
 	
 	@Column(name="phone")
-	int phone;
+	String phone;
 	
 	@Column(name="email")
 	String email;
 	
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 

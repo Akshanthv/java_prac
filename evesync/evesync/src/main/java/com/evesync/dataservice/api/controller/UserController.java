@@ -28,14 +28,16 @@ public class UserController {
 		return userService.getAllUsers();
 	}
 	
-	@PostMapping("/v1/users")
-	public User registerUser(@RequestBody User user){
-		return userService.registerUser(user);
-	}
+	@PostMapping("/v1/users/add")
+	public void add(@RequestBody User user) {
+        userService.saveUser(user);
+    }
 	
 	@GetMapping("/v1/users/{username}")
 	public User getUserByUsername(@PathVariable(name="username")String username) {
 		return userService.getUserByUsername(username);
 	}
+	
+	
 	
 }

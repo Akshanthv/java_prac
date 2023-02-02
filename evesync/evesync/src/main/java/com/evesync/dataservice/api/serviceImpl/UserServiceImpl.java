@@ -95,14 +95,21 @@ public class UserServiceImpl implements UserService{
 		if (user.isPresent()) {
 			return user.get();
 		} else {
-			 return null;
+				throw new HttpStatusCodeException(HttpStatus.NOT_FOUND, "User not found with ID: " + username) {
+					private static final long serialVersionUID = 1L;
+				};
 			}
 		}
 
 	@Override
-	public User registerUser(User user) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public void saveUser(User user) {
+        userRepository.save(user);
+    }
+
+	
+
+	
+
+	
 	
 }

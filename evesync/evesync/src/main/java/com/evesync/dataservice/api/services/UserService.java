@@ -8,11 +8,9 @@ public interface UserService{
 	
 	public Boolean authenticate(User user);
 	
-	public User registerUser(User user);
-	
 	public List<User> getAllUsers();
 	
-	public User getUserById(Long Id);
+	public User getUserById(Long id);
 	
 	public User getUserByUsername(String username);
 	
@@ -21,5 +19,8 @@ public interface UserService{
 	public User getUserByfirstname(String firstname);
 	
 	public User getUserBylastname(String lastname);
+
+	public void saveUser(User user);
+
 	
 }
