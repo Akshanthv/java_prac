@@ -28,11 +28,17 @@ public class User {
 	@Column(name="password")
 	String password;
 	
+	@Column(name="profileimg")
+	String profileimg;
+	
 	@Column(name="phone")
 	String phone;
 	
 	@Column(name="email")
 	String email;
+	
+	@Column(name="bio")
+	String bio;
 	
 	public String getPhone() {
 		return phone;

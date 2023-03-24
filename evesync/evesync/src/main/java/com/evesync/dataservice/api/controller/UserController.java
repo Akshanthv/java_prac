@@ -23,7 +23,7 @@ public class UserController {
 		return userService.authenticate(user);
 	}
 	
-	@GetMapping("/v1/users")
+	@GetMapping("/v1/users/getAllUsers")
 	public List<User> getAllUsers(){
 		return userService.getAllUsers();
 	}
@@ -33,9 +33,14 @@ public class UserController {
         userService.saveUser(user);
     }
 	
-	@GetMapping("/v1/users/{username}")
+	@GetMapping("/v1/users/")
 	public User getUserByUsername(@PathVariable(name="username")String username) {
 		return userService.getUserByUsername(username);
+	}
+	
+	@PostMapping("/v1/users/postByUsername")
+	public User postUserByUsername(@RequestBody String username) {
+		return userService.postUserByUsername(username);
 	}
 	
 	
