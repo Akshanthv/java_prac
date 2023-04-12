@@ -40,6 +40,37 @@ public class User {
 	@Column(name="bio")
 	String bio;
 	
+	@Column(name="status")
+	Boolean status;
+	
+	@Column(name = "country")
+	String country;
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	
+	public String getProfileimg() {
+		return profileimg;
+	}
+
+	public void setProfileimg(String profileimg) {
+		this.profileimg = profileimg;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+
 	public String getPhone() {
 		return phone;
 	}
@@ -56,8 +87,6 @@ public class User {
 		this.email = email;
 	}
 
-	@Column(name="status")
-	Boolean status;
 
 	public int getId() {
 		return id;

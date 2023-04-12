@@ -36,7 +36,8 @@ public class Event {
 	
 	@Column(name = "likes")
 	String likes;
-
+	
+	
 	public String getLikes() {
 		return likes;
 	}

@@ -38,8 +38,13 @@ public class UserController {
 		return userService.getUserByUsername(username);
 	}
 	
-	@PostMapping("/v1/users/postByUsername")
-	public User postUserByUsername(@RequestBody String username) {
+	@GetMapping("/v1/users/id/{userId}")
+	public User postUserByUsername(@PathVariable(name = "userId") Long userId) {
+		return null;
+	}
+	
+	@GetMapping("/v1/users/{username}")
+	public User postUserByUsername(@PathVariable(name = "username") String username) {
 		return userService.postUserByUsername(username);
 	}
 	
