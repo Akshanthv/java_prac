@@ -2,6 +2,7 @@ package com.evesync.dataservice.api.services;
 
 import java.util.List;
 
+import com.evesync.dataservice.api.dto.UserPostDto;
 import com.evesync.dataservice.api.entities.User;
 
 public interface UserService{
@@ -9,6 +10,8 @@ public interface UserService{
 	public Boolean authenticate(User user);
 	
 	public List<User> getAllUsers();
+	
+//	public List<Post> getPostsList();
 	
 	public User getUserById(Long id);
 	

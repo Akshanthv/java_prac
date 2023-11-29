@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpStatusCodeException;
 
+import com.evesync.dataservice.api.dto.UserPostDto;
 import com.evesync.dataservice.api.entities.User;
 import com.evesync.dataservice.api.repositories.UserRepository;
 import com.evesync.dataservice.api.services.UserService;
@@ -40,6 +41,9 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public User getUserById(Long userId) {
 		Optional<User> user = userRepository.findById(userId);
+		User x = user.get();
+		UserPostDto y = new UserPostDto();
+		y.setFirstname(null);
 		if (user.isPresent()) {
 			return user.get();
 		} else {
@@ -81,6 +85,7 @@ public class UserServiceImpl implements UserService{
 	public User getUserBylastname(String lastname) {
 		Optional<User> user = userRepository.findByLastname(lastname);
 		if (user.isPresent())
+			
 			return user.get();
 		else{
 			throw new HttpStatusCodeException(HttpStatus.NOT_FOUND, "User not found with ID: " + lastname) {
@@ -106,10 +111,10 @@ public class UserServiceImpl implements UserService{
         userRepository.save(user);
     }
 
-	
+	@Override
+	public List<UserPostDto> getUserDto() {
+		
+		return null;
+	}
 
-	
-
-	
-	
 }

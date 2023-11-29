@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.evesync.dataservice.api.dto.UserPostDto;
 import com.evesync.dataservice.api.entities.User;
 import com.evesync.dataservice.api.services.UserService;
 
@@ -24,8 +25,8 @@ public class UserController {
 	}
 	
 	@GetMapping("/v1/users/getAllUsers")
-	public List<User> getAllUsers(){
-		return userService.getAllUsers();
+	public List<UserPostDto> getAllUsers(){
+		return userService.getUserDto();
 	}
 	
 	@PostMapping("/v1/users/add")
