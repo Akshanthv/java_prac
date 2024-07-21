@@ -111,10 +111,11 @@ public class UserServiceImpl implements UserService{
         userRepository.save(user);
     }
 
-	@Override
-	public List<UserPostDto> getUserDto() {
-		
-		return null;
-	}
+//	@Override
+//	public List<UserPostDto> getUserDto() {
+//
+//		return null;
+//	}
+	
 
 }

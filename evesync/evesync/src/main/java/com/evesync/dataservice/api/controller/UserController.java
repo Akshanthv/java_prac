@@ -24,10 +24,10 @@ public class UserController {
 		return userService.authenticate(user);
 	}
 	
-	@GetMapping("/v1/users/getAllUsers")
-	public List<UserPostDto> getAllUsers(){
-		return userService.getUserDto();
-	}
+//	@GetMapping("/v1/users/getAllUsers")
+//	public List<UserPostDto> getAllUsers(){
+//		return userService.getUserDto();
+//	}
 	
 	@PostMapping("/v1/users/add")
 	public void add(@RequestBody User user) {
